@@ -1,9 +1,7 @@
 import os
 
 class Config:
-    '''
-    General configuration parent class
-    '''
+
     NEWS_HIGHLIGHT_API_KEY='5012e1c88574424db29c6106b935bc1e'
     NEWS_HIGHLIGHT_API_BASE_URL ='https://newsapi.org/v2/sources?&apiKey={}'
     TOP_HEADLINES_URL ='https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
