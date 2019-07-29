@@ -6,7 +6,6 @@ from config import DevConfig
 
 
 api_key = None
-# Getting the source base url
 base_url = None
 headlines_url = None
 everything_url= None
