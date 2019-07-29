@@ -1,5 +1,9 @@
 # news-highlights
 
+## author
+
+James Kirwa:feeling happy:
+
 ## Description
 
 This is a Python application that provides news highlights for the user.
@@ -23,7 +27,7 @@ This is a Python application that provides news highlights for the user.
 
 ## Technologies used
 
-* Python
+* Python:python:
 * Jquery
 * Flask
 * HTML5
