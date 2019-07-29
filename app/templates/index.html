@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% if title %}
+  <title>{{ title }}</title>
+  {% else %}
+  <title>Top Stories</title>
+  {% endif %}
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+            <h1> Trending today </h1> 
+            <hr>
+            <section class="" style="width: 1; text-align: center;">
+            {% for faith in Everything %}
+            {% if faith.urlToImage%}
+           
+                 <div style="width: 40%;display: inline-table; padding: 10px; border: 2px solid rgba(212, 186, 186, 0.479);">
+                    <h3 style="text-transform: uppercase; background-color: rgba(248, 23, 41, 0.959); padding:4%" class="card-title" >{{ faith .title }}</h3>
+                    <hr>
+                    <p class="">{{ faith.description }}</p>
+                    <a href="{{ faith.url }}">See more...</a>
+                    <p class="" class="text-muted">By {{ faith.author }}</p>
+                    <p class="" class="text-muted">Date: {{ faith.publishedAt}}</p>
+                    <img src="{{ faith.urlToImage }}" class="img-responsive" alt="News image" width="100%">
+            
+                <hr>
+            </div>    
+      {% endif %}
+      
+      {% endfor %}
+</section>
+    </div>  
+    
+
+      <div> 
+            <h1> News Sources</h1>
+            <div class="d-flex justify-content-center flex-wrap">  
+            {% for source in sources %}
+            <p style="font-size: 20px; width:30%; display: inline-table; padding: 10px;">
+                <a href="{{source.url}}">{{source.name}}</a>
+            </p>
+            {% endfor %}    
+            </div>
+      </div>
+  </div> 
+</div>
+
+
+
+{% endblock %}
